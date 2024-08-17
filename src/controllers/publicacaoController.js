@@ -1,0 +1,67 @@
+const Publicacao = require('../models/Publicacao');
+
+// Listar todas as publicações
+exports.get = async (req, res) => {
+  try {
+    const publicacoes = await Publicacao.findAll();
+    res.render('publicacao', { publicacoes });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao listar publicações');
+  }
+};
+
+// Adicionar uma nova publicação
+exports.post = async (req, res) => {
+  try {
+    const { titulo, localPublicacao, tipoPublicacao, qualis, comprovacaoPDF, primeiroAutor } = req.body;
+    await Publicacao.create({
+      titulo,
+      localPublicacao,
+      tipoPublicacao,
+      qualis,
+      comprovacaoPDF,
+      primeiroAutor,
+    });
+    res.redirect('/publicacoes');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao adicionar publicação');
+  }
+};
+
+// Editar uma publicação existente
+exports.put = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { titulo, localPublicacao, tipoPublicacao, qualis, comprovacaoPDF, primeiroAutor } = req.body;
+    await Publicacao.update({
+      titulo,
+      localPublicacao,
+      tipoPublicacao,
+      qualis,
+      comprovacaoPDF,
+      primeiroAutor,
+    }, {
+      where: { id },
+    });
+    res.redirect('/publicacoes');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao editar publicação');
+  }
+};
+
+// Deletar uma publicação
+exports.delete = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Publicacao.destroy({
+      where: { id },
+    });
+    res.redirect('/publicacoes');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao deletar publicação');
+  }
+};

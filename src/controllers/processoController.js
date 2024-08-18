@@ -1,7 +1,7 @@
 const ProcessoSeletivo = require('../models/ProcessoSeletivo');
 
 // Listar todos os processos seletivos
-exports.get = async (req, res) => {
+exports.getAllProcessosSeletivos = async (req, res) => {
   try {
     const processos = await ProcessoSeletivo.findAll();
     res.render('processo', { processos });
@@ -12,7 +12,7 @@ exports.get = async (req, res) => {
 };
 
 // Adicionar um novo processo seletivo
-exports.post = async (req, res) => {
+exports.createProcessoSeletivo = async (req, res) => {
   try {
     const { ano, semestre, numVagas, porcentagemCota } = req.body;
     await ProcessoSeletivo.create({
@@ -29,7 +29,7 @@ exports.post = async (req, res) => {
 };
 
 // Editar um processo seletivo existente
-exports.put = async (req, res) => {
+exports.updateProcessoSeletivo = async (req, res) => {
   try {
     const { id } = req.params;
     const { ano, semestre, numVagas, porcentagemCota } = req.body;
@@ -49,7 +49,7 @@ exports.put = async (req, res) => {
 };
 
 // Deletar um processo seletivo
-exports.delete = async (req, res) => {
+exports.deleteProcessoSeletivo = async (req, res) => {
   try {
     const { id } = req.params;
     await ProcessoSeletivo.destroy({

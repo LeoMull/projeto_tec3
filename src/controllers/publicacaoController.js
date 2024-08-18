@@ -1,7 +1,7 @@
 const Publicacao = require('../models/Publicacao');
 
 // Listar todas as publicações
-exports.get = async (req, res) => {
+exports.getAllPublicacoes = async (req, res) => {
   try {
     const publicacoes = await Publicacao.findAll();
     res.render('publicacao', { publicacoes });
@@ -12,7 +12,7 @@ exports.get = async (req, res) => {
 };
 
 // Adicionar uma nova publicação
-exports.post = async (req, res) => {
+exports.createPublicacao = async (req, res) => {
   try {
     const { titulo, localPublicacao, tipoPublicacao, qualis, comprovacaoPDF, primeiroAutor } = req.body;
     await Publicacao.create({
@@ -31,7 +31,7 @@ exports.post = async (req, res) => {
 };
 
 // Editar uma publicação existente
-exports.put = async (req, res) => {
+exports.updatePublicacao = async (req, res) => {
   try {
     const { id } = req.params;
     const { titulo, localPublicacao, tipoPublicacao, qualis, comprovacaoPDF, primeiroAutor } = req.body;
@@ -53,7 +53,7 @@ exports.put = async (req, res) => {
 };
 
 // Deletar uma publicação
-exports.delete = async (req, res) => {
+exports.deletePublicacao = async (req, res) => {
   try {
     const { id } = req.params;
     await Publicacao.destroy({

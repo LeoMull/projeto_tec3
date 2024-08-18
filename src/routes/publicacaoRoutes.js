@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const publicacaoController = require('../controllers/publicacaoController');
 
-// Rota para obter todas as publicações
+//Rota para obter todas as publicações
 router.get('/', publicacaoController.getAllPublicacoes);
 
 // Rota para obter uma publicação específica por ID

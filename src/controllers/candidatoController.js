@@ -98,7 +98,7 @@ exports.createCandidato = async (req, res) => {
 };
 
 // Editar um candidato existente
-exports.put = async (req, res) => {
+exports.updateCandidato = async (req, res) => {
   try {
     const { id } = req.params;
     const {
@@ -187,7 +187,7 @@ exports.put = async (req, res) => {
 };
 
 // Deletar um candidato
-exports.delete = async (req, res) => {
+exports.deleteCandidato = async (req, res) => {
   try {
     const { id } = req.params;
     await Candidato.destroy({

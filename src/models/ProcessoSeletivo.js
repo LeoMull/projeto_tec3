@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const ProcessoSeletivo = sequelize.define('ProcessoSeletivo', {
+  idProcesso:{
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+  },
   ano: {
     type: DataTypes.INTEGER,
     allowNull: false,

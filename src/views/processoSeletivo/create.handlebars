@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Processo Seletivo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Cadastro de Processo Seletivo</h1>
+    <form action="/processoSeletivo/create" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="idProcesso">ID:</label>
+            <input type="number" id="idProcesso" name="idProcesso" required>
+        </div>
+        <div>
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" required>
+        </div>
+        <div>
+            <label for="semestre">Semestre:</label>
+            <select id="semestre" name="semestre" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div>
+            <label for="numVagas">Número de Vagas:</label>
+            <input type="number" id="numVagas" name="numVagas" required>
+        </div>
+        <div>
+            <label for="porcentagemCota">Porcentagem de Cota (%):</label>
+            <input type="number" step="0.01" id="porcentagemCota" name="porcentagemCota" required>
+        </div>
+        <div>
+            <label for="csvFile">Upload de Arquivo CSV:</label>
+            <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+        </div>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+</body>
+</html>

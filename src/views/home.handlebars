@@ -1,0 +1,7 @@
+<h1>Processos Seletivos</h1>
+<ul>
+  {{#each processos}}
+    <li><a href="/processos/{{this.id}}">{{this.ano}}/{{this.semestre}}</a></li>
+  {{/each}}
+</ul>
+<a href="/processoSeletivo/create">Criar novo Processo Seletivo</a>

@@ -1,0 +1,7 @@
+<h2>Candidatos Cadastrados</h2>
+<ul>
+    {{#each candidatos}}
+    <li><a href="/candidatos/{{this.id}}">{{this.nome}}</a></li>
+    {{/each}}
+</ul>
+<a href="/candidatos/create">Cadastrar Novo Candidato</a>

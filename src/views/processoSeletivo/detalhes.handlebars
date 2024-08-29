@@ -1,0 +1,20 @@
+{{#if processo.dataValues.idProcesso}}
+<h1>Detalhes do Processo {{processo.dataValues.idProcesso}} ano {{processo.dataValues.ano}}/{{processo.dataValues.semestre}}</h1>
+<ul>
+    {{#each candidatos}}
+    <li>
+        <p>Nome: {{this.dataValues.nomeCompleto}}</p>
+        <p>CPF: {{this.dataValues.cpf}}</p>
+        <p>Nota: {{this.dataValues.nota}}</p>
+        {{#if this.dataValues.id}}
+        <p>Processo: {{../processo.dataValues.idProcesso}}</p>
+        <a href="/processoSeletivo/{{../processo.dataValues.idProcesso}}/{{this.dataValues.id}}">Detalhes do Candidato</a>
+        {{else}}
+        <p>ID do Candidato não disponível</p>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>ID do Processo não disponível</p>
+{{/if}}

@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('postgres', 'postgres', 'leo123', {
     host: 'localhost',
     dialect: 'postgres', 
+    schema: 'processos_tec3'
 });
 
 sequelize.authenticate()

@@ -1,0 +1,10 @@
+<h2>Processos Seletivos Cadastrados</h2>
+    <ul>
+        {{#each processos}}
+        <li>
+            Processo id {{this.dataValues.idProcesso}} - Ano {{this.dataValues.ano}}/{{this.dataValues.semestre}} - 
+            <a href="/processoSeletivo/{{this.dataValues.idProcesso}}">Ver Candidatos</a>
+        </li>
+        {{/each}}
+    </ul>
+<a href="/processoSeletivo/create">Criar Novo Processo Seletivo</a>

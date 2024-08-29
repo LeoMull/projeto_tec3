@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Candidato</title>
+</head>
+<body>
+    <h2>Editar Candidato</h2>
+    <form action="/candidatos/{{candidato.dataValues.id}}/update" method="POST">
+        <label for="nomeCompleto">Nome Completo:</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" value="{{candidato.dataValues.nomeCompleto}}" required><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" value="{{candidato.dataValues.dataNascimento}}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{candidato.dataValues.email}}" required><br>
+
+        <label for="nomeMae">Nome da Mãe:</label>
+        <input type="text" id="nomeMae" name="nomeMae" value="{{candidato.dataValues.nomeMae}}" required><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" value="{{candidato.dataValues.cpf}}" required><br>
+
+        <label for="identidade">Identidade:</label>
+        <input type="text" id="identidade" name="identidade" value="{{candidato.dataValues.identidade}}" required><br>
+
+        <label for="dataEmissaoIdentidade">Data de Emissão da Identidade:</label>
+        <input type="date" id="dataEmissaoIdentidade" name="dataEmissaoIdentidade" value="{{candidato.dataValues.dataEmissaoIdentidade}}" required><br>
+
+        <label for="orgaoEmissorIdentidade">Órgão Emissor da Identidade:</label>
+        <input type="text" id="orgaoEmissorIdentidade" name="orgaoEmissorIdentidade" value="{{candidato.dataValues.orgaoEmissorIdentidade}}" required><br>
+
+        <label for="tituloEleitoral">Título Eleitoral:</label>
+        <input type="text" id="tituloEleitoral" name="tituloEleitoral" value="{{candidato.dataValues.tituloEleitoral}}" required><br>
+
+        <label for="serieDocumentoMilitar">Série do Documento Militar:</label>
+        <input type="text" id="serieDocumentoMilitar" name="serieDocumentoMilitar" value="{{candidato.dataValues.serieDocumentoMilitar}}"><br>
+
+        <label for="enderecoResidencial">Endereço Residencial:</label>
+        <input type="text" id="enderecoResidencial" name="enderecoResidencial" value="{{candidato.dataValues.enderecoResidencial}}" required><br>
+
+        <label for="cidadeResidencia">Cidade de Residência:</label>
+        <input type="text" id="cidadeResidencia" name="cidadeResidencia" value="{{candidato.dataValues.cidadeResidencia}}" required><br>
+
+        <label for="estadoResidencia">Estado de Residência:</label>
+        <input type="text" id="estadoResidencia" name="estadoResidencia" value="{{candidato.dataValues.estadoResidencia}}" required><br>
+
+        <label for="telefoneContato">Telefone para Contato:</label>
+        <input type="text" id="telefoneContato" name="telefoneContato" value="{{candidato.dataValues.telefoneContato}}" required><br>
+
+        <label for="linkLattes">Link para o Lattes:</label>
+        <input type="url" id="linkLattes" name="linkLattes" value="{{candidato.dataValues.linkLattes}}"><br>
+
+        <label for="reservasVagas">Reservas de Vagas:</label>
+        <input type="text" id="reservasVagas" name="reservasVagas" value="{{candidato.dataValues.reservasVagas}}"><br>
+
+        <label for="siape">SIAPE:</label>
+        <input type="text" id="siape" name="siape" value="{{candidato.dataValues.siape}}"><br>
+
+        <label for="nomeCurso">Nome do Curso:</label>
+        <input type="text" id="nomeCurso" name="nomeCurso" value="{{candidato.dataValues.nomeCurso}}" required><br>
+
+        <label for="tipoCurso">Tipo de Curso:</label>
+        <input type="text" id="tipoCurso" name="tipoCurso" value="{{candidato.dataValues.tipoCurso}}" required><br>
+
+        <label for="instituicao">Instituição:</label>
+        <input type="text" id="instituicao" name="instituicao" value="{{candidato.dataValues.instituicao}}" required><br>
+
+        <label for="anoConclusao">Ano de Conclusão:</label>
+        <input type="number" id="anoConclusao" name="anoConclusao" value="{{candidato.dataValues.anoConclusao}}" required><br>
+
+        <label for="localTrabalho">Local de Trabalho:</label>
+        <input type="text" id="localTrabalho" name="localTrabalho" value="{{candidato.dataValues.localTrabalho}}"><br>
+
+        <label for="atuacao">Atuação:</label>
+        <input type="text" id="atuacao" name="atuacao" value="{{candidato.dataValues.atuacao}}"><br>
+
+        <label for="inglesLeitura">Inglês (Leitura):</label>
+        <input type="text" id="inglesLeitura" name="inglesLeitura" value="{{candidato.dataValues.inglesLeitura}}" required><br>
+
+        <label for="inglesEscrita">Inglês (Escrita):</label>
+        <input type="text" id="inglesEscrita" name="inglesEscrita" value="{{candidato.dataValues.inglesEscrita}}" required><br>
+
+        <label for="inglesFala">Inglês (Fala):</label>
+        <input type="text" id="inglesFala" name="inglesFala" value="{{candidato.dataValues.inglesFala}}" required><br>
+
+        <label for="tipoInscricao">Tipo de Inscrição:</label>
+        <input type="text" id="tipoInscricao" name="tipoInscricao" value="{{candidato.dataValues.tipoInscricao}}" required><br>
+
+        <label for="semestreIngresso">Semestre de Ingresso:</label>
+        <input type="text" id="semestreIngresso" name="semestreIngresso" value="{{candidato.dataValues.semestreIngresso}}" required><br>
+
+        <label for="orientadorPreferencial">Orientador Preferencial:</label>
+        <input type="text" id="orientadorPreferencial" name="orientadorPreferencial" value="{{candidato.dataValues.orientadorPreferencial}}" required><br>
+
+        <label for="segundaOpcao">Segunda Opção:</label>
+        <input type="text" id="segundaOpcao" name="segundaOpcao" value="{{candidato.dataValues.segundaOpcao}}"><br>
+
+        <label for="terceiraOpcao">Terceira Opção:</label>
+        <input type="text" id="terceiraOpcao" name="terceiraOpcao" value="{{candidato.dataValues.terceiraOpcao}}"><br>
+
+        <label for="dedicacaoIntegral">Dedicação Integral:</label>
+        <input type="checkbox" id="dedicacaoIntegral" name="dedicacaoIntegral" {{#if candidato.dataValues.dedicacaoIntegral}}checked{{/if}}><br>
+
+        <label for="manutencaoVinculo">Manutenção de Vínculo:</label>
+        <input type="checkbox" id="manutencaoVinculo" name="manutencaoVinculo" {{#if candidato.dataValues.manutencaoVinculo}}checked{{/if}}><br>
+
+        <label for="interesseBolsa">Interesse em Bolsa:</label>
+        <input type="checkbox" id="interesseBolsa" name="interesseBolsa" {{#if candidato.dataValues.interesseBolsa}}checked{{/if}}><br>
+
+        <label for="projetoDoutoradoMemorial">Projeto de Doutorado / Memorial:</label>
+        <textarea id="projetoDoutoradoMemorial" name="projetoDoutoradoMemorial">{{candidato.dataValues.projetoDoutoradoMemorial}}</textarea><br>
+
+        <label for="tituloPublicacao">Título da Publicação:</label>
+        <input type="text" id="tituloPublicacao" name="tituloPublicacao" value="{{candidato.dataValues.tituloPublicacao}}"><br>
+
+        <label for="localPublicacao">Local da Publicação:</label>
+        <input type="text" id="localPublicacao" name="localPublicacao" value="{{candidato.dataValues.localPublicacao}}"><br>
+
+        <label for="tipoPublicacao">Tipo da Publicação:</label>
+        <input type="text" id="tipoPublicacao" name="tipoPublicacao" value="{{candidato.dataValues.tipoPublicacao}}"><br>
+
+        <label for="qualisPublicacao">Qualis da Publicação:</label>
+        <input type="text" id="qualisPublicacao" name="qualisPublicacao" value="{{candidato.dataValues.qualisPublicacao}}"><br>
+
+        <label for="comprovacaoPublicacao">Comprovação da Publicação:</label>
+        <input type="text" id="comprovacaoPublicacao" name="comprovacaoPublicacao" value="{{candidato.dataValues.comprovacaoPublicacao}}"><br>
+
+        <label for="primeiroAutor">Primeiro Autor:</label>
+        <input type="text" id="primeiroAutor" name="primeiroAutor" value="{{candidato.dataValues.primeiroAutor}}"><br>
+
+        <label for="curriculoLattes">Currículo Lattes:</label>
+        <input type="url" id="curriculoLattes" name="curriculoLattes" value="{{candidato.dataValues.curriculoLattes}}"><br>
+
+        <label for="diplomaGraduacao">Diploma de Graduação:</label>
+        <input type="file" id="diplomaGraduacao" name="diplomaGraduacao"><br>
+
+        <label for="diplomaMestrado">Diploma de Mestrado:</label>
+        <input type="file" id="diplomaMestrado" name="diplomaMestrado"><br>
+
+        <label for="historicoGraduacao">Histórico de Graduação:</label>
+        <input type="file" id="historicoGraduacao" name="historicoGraduacao"><br>
+
+        <label for="historicoMestrado">Histórico de Mestrado:</label>
+        <input type="file" id="historicoMestrado" name="historicoMestrado"><br>
+
+        <label for="carteiraIdentidade">Carteira de Identidade:</label>
+        <input type="file" id="carteiraIdentidade" name="carteiraIdentidade"><br>
+
+        <label for="cpfSecundario">CPF Secundário:</label>
+        <input type="text" id="cpfSecundario" name="cpfSecundario" value="{{candidato.dataValues.cpfSecundario}}"><br>
+
+        <label for="tituloEleitor">Título de Eleitor:</label>
+        <input type="text" id="tituloEleitor" name="tituloEleitor" value="{{candidato.dataValues.tituloEleitor}}"><br>
+
+        <label for="certificadoMilitar">Certificado Militar:</label>
+        <input type="file" id="certificadoMilitar" name="certificadoMilitar"><br>
+
+        <label for="certidaoCasamento">Certidão de Casamento:</label>
+        <input type="file" id="certidaoCasamento" name="certidaoCasamento"><br>
+
+        <label for="comprovantePagamento">Comprovante de Pagamento:</label>
+        <input type="file" id="comprovantePagamento" name="comprovantePagamento"><br>
+
+        <label for="documentacaoAdicional">Documentação Adicional:</label>
+        <input type="file" id="documentacaoAdicional" name="documentacaoAdicional"><br>
+
+        <label for="outroDocumento">Outro Documento:</label>
+        <input type="file" id="outroDocumento" name="outroDocumento"><br>
+
+        <input type="hidden" name="idUsuario" value="{{candidato.dataValues.idUsuario}}">
+        <input type="hidden" name="timestamp" value="{{candidato.dataValues.timestamp}}">
+        <input type="hidden" name="lastUpdated" value="{{candidato.dataValues.lastUpdated}}">
+        <input type="hidden" name="createdBy" value="{{candidato.dataValues.createdBy}}">
+        <input type="hidden" name="updatedBy" value="{{candidato.dataValues.updatedBy}}">
+        <input type="hidden" name="draft" value="{{candidato.dataValues.draft}}">
+        <input type="hidden" name="ip" value="{{candidato.dataValues.ip}}">
+        <input type="hidden" name="key" value="{{candidato.dataValues.key}}">
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <a href="/candidatos/{{candidato.dataValues.id}}">Voltar aos detalhes</a>
+    <a href="/candidatos">Voltar à lista de candidatos</a>
+</body>
+</html>

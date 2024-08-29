@@ -6,13 +6,15 @@ const candidatoController = require('../controllers/candidatoController');
 router.get('/', candidatoController.getAllCandidatos);
 
 // Rota para criar um novo candidato
-router.post('/', candidatoController.createCandidato);
+router.post('/create', candidatoController.createCandidato);
 
+router.get('/:id/edit', candidatoController.editCandidato);
+router.post('/:id/update', candidatoController.updateCandidato);
 // Rota para obter um candidato específico pelo ID
-//router.get('/:id', candidatoController.getCandidatoById);
+router.get('/:idProcesso/:id', candidatoController.getCandidatoById);
 
 // Rota para atualizar um candidato pelo ID
-router.put('/:id', candidatoController.updateCandidato);
+router.put('/:idProcesso/:idCandidato', candidatoController.updateCandidato);
 
 // Rota para deletar um candidato pelo ID
 router.delete('/:id', candidatoController.deleteCandidato);
